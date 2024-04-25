@@ -1,0 +1,16 @@
+<!-- templates/myapp/confirm_delete.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Property - Confirm Delete</title>
+</head>
+<body>
+    <h1>Property - Confirm Delete</h1>
+    <p>Are you sure you want to delete "{{ object.property_name }}"?</p>
+    <form method="post" action="">
+        {% csrf_token %}
+        <input type="submit" value="Confirm Delete">
+    </form>
+    <a href="{% url 'home' %}">Cancel</a>
+</body>
+</html>

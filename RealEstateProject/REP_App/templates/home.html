@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+    </head>
+    <body>
+        {% if response %}
+        
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    {{msg}}
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <h1>Property and Tenant</h1>
+        <p><a href="{% url 'create_property' %}"> Create Property</a></p>
+        <p><a href="{% url 'create_Tenant' %}"> Create Tenant</a></p>
+        <p><a href="{% url 'View_All_Property' %}"> View All Property</a></p>
+        <p><a href="{% url 'View_All_Tenant' %}"> View All Tenant</a></p>
+        {% endif %}
+    </body> 
+</html>

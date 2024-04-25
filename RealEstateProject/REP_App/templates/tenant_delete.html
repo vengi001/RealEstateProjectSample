@@ -1,0 +1,16 @@
+<!-- templates/myapp/confirm_delete.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tenant - Confirm Delete</title>
+</head>
+<body>
+    <h1>Tenant - Confirm Delete</h1>
+    <p>Are you sure you want to delete "{{ object.tenant_name }}"?</p>
+    <form method="post" action="">
+        {% csrf_token %}
+        <input type="submit" value="Confirm Delete">
+    </form>
+    <a href="{% url 'home' %}">Cancel</a>
+</body>
+</html>

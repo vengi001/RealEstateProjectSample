@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <h1>
+        Tenant Form
+    </h1>
+    <body>
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+        <a href="{% url 'home' %}"> Home</a>
+    </body>
+</html>
